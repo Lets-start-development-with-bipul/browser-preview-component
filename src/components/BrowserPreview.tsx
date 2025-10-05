@@ -114,17 +114,17 @@ const BrowserPreview: React.FC<BrowserPreviewProps> = ({
       </div>
 
       {/* Browser Controls */}
-      <div className="flex items-center gap-2 p-2 sm:p-3 border-b border-gray-600/30 bg-gradient-to-r from-gray-800/30 to-gray-700/30">
-        <div className="flex items-center gap-1 sm:gap-2">
+      <div className="flex items-center gap-1 sm:gap-2 p-2 border-b border-gray-600/30 bg-gradient-to-r from-gray-800/30 to-gray-700/30">
+        <div className="flex items-center gap-1">
           <Button
             variant="outline"
             size="sm"
             onClick={handleBack}
             disabled={!canGoBack}
-            className="h-6 w-6 sm:h-7 sm:w-7 p-0 border-gray-500/50 text-white hover:text-white disabled:text-gray-500 hover:bg-white/10 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+            className="h-5 w-5 sm:h-6 sm:w-6 p-0 border-gray-500/50 text-white hover:text-white disabled:text-gray-500 hover:bg-white/10 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
             style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
           >
-            <ChevronLeft className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            <ChevronLeft className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
           </Button>
           
           <Button
@@ -132,36 +132,36 @@ const BrowserPreview: React.FC<BrowserPreviewProps> = ({
             size="sm"
             onClick={handleForward}
             disabled={!canGoForward}
-            className="h-6 w-6 sm:h-7 sm:w-7 p-0 border-gray-500/50 text-white hover:text-white disabled:text-gray-500 hover:bg-white/10 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+            className="h-5 w-5 sm:h-6 sm:w-6 p-0 border-gray-500/50 text-white hover:text-white disabled:text-gray-500 hover:bg-white/10 transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
             style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
           >
-            <ChevronRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            <ChevronRight className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
           </Button>
           
           <Button
             variant="outline"
             size="sm"
             onClick={handleRefresh}
-            className="h-6 w-6 sm:h-7 sm:w-7 p-0 border-gray-500/50 text-white hover:text-white hover:bg-white/10 transition-all duration-200 hover:scale-105 hover:rotate-180"
+            className="h-5 w-5 sm:h-6 sm:w-6 p-0 border-gray-500/50 text-white hover:text-white hover:bg-white/10 transition-all duration-200 hover:scale-105 hover:rotate-180"
             style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
           >
-            <RotateCcw className="h-3 w-3 sm:h-3.5 sm:w-3.5 transition-transform duration-200" />
+            <RotateCcw className="h-2.5 w-2.5 sm:h-3 sm:w-3 transition-transform duration-200" />
           </Button>
 
           <Button
             variant="outline"
             size="sm"
             onClick={openInNewTab}
-            className="h-6 w-6 sm:h-7 sm:w-7 p-0 border-gray-500/50 text-white hover:text-white hover:bg-white/10 transition-all duration-200 hover:scale-105"
+            className="h-5 w-5 sm:h-6 sm:w-6 p-0 border-gray-500/50 text-white hover:text-white hover:bg-white/10 transition-all duration-200 hover:scale-105"
             style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
           >
-            <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            <ExternalLink className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
           </Button>
         </div>
         
-        <div className="flex-1 mx-2 sm:mx-3 min-w-0">
+        <div className="flex-1 mx-2 min-w-0">
           <div 
-            className="border border-gray-500/30 rounded-md px-2 sm:px-3 py-1 text-xs sm:text-sm text-white/90 truncate font-mono bg-gradient-to-r from-gray-800/50 to-gray-700/50 shadow-inner"
+            className="border border-gray-500/30 rounded px-2 py-0.5 text-xs text-white/90 truncate font-mono bg-gradient-to-r from-gray-800/50 to-gray-700/50 shadow-inner"
             style={{ 
               background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
               backdropFilter: 'blur(10px)'
@@ -172,8 +172,8 @@ const BrowserPreview: React.FC<BrowserPreviewProps> = ({
         </div>
         
         {isLoading && (
-          <div className="flex items-center gap-1 sm:gap-2 text-xs text-white/80 bg-white/5 px-2 py-1 rounded-full backdrop-blur-sm">
-            <Loader2 className="h-3 w-3 animate-spin" />
+          <div className="flex items-center gap-1 text-xs text-white/80 bg-white/5 px-2 py-0.5 rounded-full backdrop-blur-sm">
+            <Loader2 className="h-2.5 w-2.5 animate-spin" />
             <span className="hidden sm:inline font-medium text-xs">Loading...</span>
           </div>
         )}
