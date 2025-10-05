@@ -215,6 +215,12 @@ const BrowserPreview: React.FC<BrowserPreviewProps> = ({
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
           onLoad={handleLoad}
           title="Browser Preview"
+          style={{ 
+            overflow: 'hidden',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}
+          scrolling="no"
         />
         
         {isLoading && (
